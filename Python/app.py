@@ -31,7 +31,7 @@ else:
     print("Hola22")
 
 #List - mutable
-list = [1,2,3,4,5]
+list4 = [1,2,3,4,5]
 
 #Tuple - Inmutable
 tuple = (1,2,3,4,5)
@@ -42,21 +42,21 @@ for i in range(1,10,2):
 
 print()
 
-for i in range(len(list)):
+for i in range(len(list4)):
     print(i)
 
 print()
 
-for i in range(len(list)):
-    print(list[i])
+for i in range(len(list4)):
+    print(list4[i])
 
 print()
 
-for i in list:
+for i in list4:
     print(i)
 
 print()
-for i, element in enumerate(list):
+for i, element in enumerate(list4):
     print(i, element)
 
 #While Loops
@@ -67,8 +67,8 @@ while i < 10:
 
 #Slice Loops
 #slice = [START:STOP:STEP]
-slice = list[0:3:1]
-slice2 = list[::2]
+slice = list4[0:3:1]
+slice2 = list4[::2]
 print(slice2)
 
 
@@ -202,4 +202,19 @@ lambda_fun = lambda x: x + 5
 print(lambda_fun(5))
 
 
-#Map and Filter
+#Map
+list2 = [1,2,3,4,5,5,6,67,7,8,8,90,0,0,8,65,5]
+
+mp = map(lambda i: i + 1, list2)
+
+print(list(mp))
+
+#Filter
+filter = filter(lambda f: f % 2 == 0, list2)
+print(list(filter))
+
+
+# F Strings
+prueba = 10
+x = f"Hola mundo {2+5} {prueba}"
+print(x)
